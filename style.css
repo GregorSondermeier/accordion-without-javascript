@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .accordion-container {
     list-style-type: none;
     padding: 0;
@@ -5,14 +9,6 @@
 
 .accordion-container .accordion-slide input[type="radio"] {
     display: none;
-}
-
-.accordion-container .accordion-slide .pane {
-    display: none;
-}
-
-.accordion-container .accordion-slide input[type="radio"]:checked ~ .pane {
-    display: block;
 }
 
 .accordion-container .accordion-slide label {
@@ -36,7 +32,18 @@
 }
 
 .accordion-container .accordion-slide .pane {
-    padding: 10px 20px;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    will-change: max-height;
+    transition-property: max-height;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
     background-color: #fff;
     color: #333;
+}
+
+.accordion-container .accordion-slide input[type="radio"]:checked ~ .pane {
+    max-height: 1000px;
+    padding: 10px 20px;
 }
