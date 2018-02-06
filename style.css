@@ -1,0 +1,42 @@
+.accordion-container {
+    list-style-type: none;
+    padding: 0;
+}
+
+.accordion-container .accordion-slide input[type="radio"] {
+    display: none;
+}
+
+.accordion-container .accordion-slide .pane {
+    display: none;
+}
+
+.accordion-container .accordion-slide input[type="radio"]:checked ~ .pane {
+    display: block;
+}
+
+.accordion-container .accordion-slide label {
+    display: block;
+    margin-bottom: 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.accordion-container .accordion-slide:last-child label {
+    margin-bottom: 0;
+}
+
+.accordion-container .accordion-slide:last-child .pane {
+    border-bottom: 1px solid #333;
+}
+
+.accordion-container .accordion-slide {
+    background-color: #333;
+    color: #fff;
+}
+
+.accordion-container .accordion-slide .pane {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+}
