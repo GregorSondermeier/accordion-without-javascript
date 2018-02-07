@@ -34,16 +34,18 @@
 .accordion-container .accordion-slide .pane {
     overflow: hidden;
     max-height: 0;
-    padding: 0;
-    will-change: max-height;
-    transition-property: max-height;
-    transition-duration: 0.5s;
-    transition-delay: 0s;
+    will-change: max-height, padding-top, padding-bottom;
+    transition-property: max-height, padding-top, padding-bottom;
+    transition-duration: 0.25s;
+    padding-right: 20px;
+    padding-left: 20px;
     background-color: #fff;
     color: #333;
 }
 
 .accordion-container .accordion-slide input[type="radio"]:checked ~ .pane {
-    max-height: 1000px;
-    padding: 10px 20px;
+    max-height: 284px;
+    transition-duration: 0.75s;
+    padding-top: 10px;
+    padding-left: 10px;
 }
